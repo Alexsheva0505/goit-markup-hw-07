@@ -447,7 +447,14 @@ img {
 }
 .general-list {
   display: block;
-  margin-bottom: 72px;
+}
+@media (min-width: 768px) {
+  .general-list {
+    display: flex;
+    row-gap: 72px;
+    column-gap: 24px;
+    flex-wrap: wrap;
+  }
 }
 @media (min-width: 1200px) {
   .general-list {
@@ -456,19 +463,13 @@ img {
     gap: 24px;
   }
 }
-@media (max-width: 1200px) {
-  .general-list {
-    display: flex;
-    row-gap: 72px;
-    column-gap: 24px;
-    flex-wrap: wrap;
-  }
-}
 
 .general-item {
+  margin-bottom: 72px;
 }
-@media (max-width: 1200px) {
+@media (min-width: 768px) {
   .general-item {
+    margin: 0;
     flex-basis: calc((100% - 24px) / 2);
   }
 }

@@ -378,6 +378,18 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: Linear-gradient(
+        to right,
+        var(--clr-gradiet-hero),
+        var(--clr-gradiet-hero)
+      ),
+      url(../images/people-office@x2.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 188px;
@@ -623,7 +635,7 @@ img {
   justify-content: center;
   column-gap: 24px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .about-person {
     display: flex;
     gap: 64px;
